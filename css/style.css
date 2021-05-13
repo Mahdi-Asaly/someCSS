@@ -1,0 +1,525 @@
+﻿.checkbox-container {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background: #182825;
+}
+.checkbox-container {
+  display: none;
+}
+.menu-content {
+  display: flex;
+  background: white;
+  color: black;
+  float: left;
+}
+#tablet {
+  display: none;
+}
+
+.menu-content ul {
+  display: block;
+  padding-left: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease 0.7s, width 0.7s ease;
+}
+
+.menu-content ul li {
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  cursor: pointer;
+  transition: color 0.5s, background 0.5s;
+}
+
+.menu-content ul li:hover {
+  color: #0cd6ad;
+  background: gray;
+}
+
+.checkbox-trigger {
+  opacity: 0;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.hamburger-menu,
+.hamburger-menu::before,
+.hamburger-menu::after {
+  display: block;
+  position: absolute;
+  background: black;
+  width: 40px;
+  height: 4px;
+  margin: 1.3em 3em;
+  transition: background 0.3s;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+  content: "";
+  position: absolute;
+  margin: -0.7em 0 0;
+  transition: width 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+}
+
+.hamburger-menu::after {
+  margin-top: 0.7em;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 1.45em;
+  margin-right: 0.35em;
+  margin-left: 0.35em;
+  margin-bottom: 1.45em;
+  transition: width 0.3s ease;
+}
+.red9 {
+  display: none;
+}
+.checkbox-trigger:checked {
+  left: 202px;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu {
+  width: 2em;
+  transition: width 0.7s ease 0.7s;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu::before {
+  width: 1.2em;
+  transform: rotate(-35deg);
+  margin-top: -0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu::after {
+  width: 1.2em;
+  transform: rotate(35deg);
+  margin-top: 0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content ul {
+  width: 200px;
+  height: 400px;
+  transition: width 0.7s ease 0.3s, height 0.3s ease;
+}
+
+.black {
+  grid-area: myBlack;
+  background-color: black;
+}
+.red {
+  grid-area: myRed;
+  background-color: red;
+}
+.SecRed {
+  grid-area: mySecRed;
+  background-color: red;
+}
+.blue {
+  grid-area: myBlue;
+  background-color: blue;
+}
+.cyan {
+  grid-area: myCyan;
+  background-color: cyan;
+}
+.lightblue {
+  grid-area: myLightblue;
+  background-color: lightblue;
+}
+
+.red2 {
+  grid-area: myRed2;
+  background-color: red;
+}
+.red3 {
+  grid-area: myRed3;
+  background-color: red;
+}
+.red4 {
+  grid-area: MyRed4;
+  background-color: red;
+}
+.blue2 {
+  grid-area: myBlue2;
+  background-color: blue;
+}
+.lightblue3 {
+  grid-area: myLightblue3;
+  background-color: lightblue;
+}
+
+.red6 {
+  grid-area: myRed6;
+  background-color: red;
+}
+.red5 {
+  grid-area: MyRed5;
+  background-color: red;
+}
+.blue3 {
+  grid-area: myBlue3;
+  background-color: blue;
+}
+.lightblue4 {
+  grid-area: myLightblue4;
+  background-color: lightblue;
+}
+.cyan2 {
+  grid-area: myCyan2;
+  background-color: cyan;
+}
+
+.lightblue2 {
+  display: none;
+}
+.MyRed {
+  display: none;
+}
+.MyRed2 {
+  display: none;
+}
+.Mylightblue2 {
+  display: none;
+}
+.cyan3 {
+  display: none;
+}
+.MyRed3 {
+  display: none;
+}
+p {
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 20px;
+}
+section {
+  background: gainsboro;
+}
+button {
+  margin-left: 0;
+  margin-right: 2px;
+  background-color: gainsboro;
+  border-width: 0px;
+  padding: 10px;
+  border-right: 1px solid black;
+}
+
+.navigation--responsive {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 100vh;
+  grid-template-areas:
+    "myBlack myRed myLightblue myBlue mySecRed"
+    "myBlack . . . myCyan"
+    "myRed2 myBlue2 myRed3 myLightblue3 MyRed4"
+    "myLightblue4 MyRed5 myCyan2 myRed6 myBlue3";
+  grid-gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+  .main-navigation {
+    display: none;
+  }
+
+  .checkbox-container {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .black {
+    grid-area: blk;
+    background-color: black;
+  }
+  .red {
+    grid-area: rd;
+    background-color: red;
+  }
+  .red2 {
+    grid-area: rd2;
+    background-color: red;
+  }
+  .red3 {
+    grid-area: rd3;
+    background-color: red;
+  }
+  .red4 {
+    grid-area: rd4;
+    background-color: red;
+  }
+  .red5 {
+    grid-area: rd5;
+    background-color: red;
+  }
+  .red6 {
+    grid-area: rd6;
+    background-color: red;
+  }
+  .MyRed2 {
+    display: block;
+    grid-area: rd8;
+    background-color: red;
+  }
+  .MyRed {
+    display: block;
+    grid-area: rd7;
+    background-color: red;
+  }
+  .red9 {
+    display: block;
+    grid-area: rd9;
+    background-color: red;
+  }
+  .SecRed {
+    grid-area: srd;
+    background-color: red;
+  }
+  .blue {
+    grid-area: be;
+    background-color: blue;
+  }
+  .blue2 {
+    grid-area: be2;
+    background-color: blue;
+  }
+  .blue3 {
+    grid-area: be3;
+    background-color: blue;
+  }
+  .cyan {
+    grid-area: cn;
+    background-color: cyan;
+  }
+  .lightblue4 {
+    display: none;
+  }
+
+  .red2 {
+    display: none;
+  }
+  .cyan2 {
+    display: none;
+    grid-area: cn2;
+    background-color: cyan;
+  }
+  .cyan3 {
+    display: block;
+    grid-area: cn3;
+    background-color: cyan;
+  }
+  .lightblue {
+    grid-area: le;
+    background-color: lightblue;
+  }
+  .lightblue2 {
+    display: block;
+    grid-area: myle2;
+    background-color: lightblue;
+  }
+  .lightblue3 {
+    display: block;
+    grid-area: myle3;
+    background-color: lightblue;
+  }
+  #tablet {
+    grid-area: text;
+    display: block;
+    font-size: 22px;
+    text-align: right;
+    color: royalblue;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100vh;
+    grid-template-areas:
+      "rd le be srd"
+      "blk rd3 text ."
+      "rd4 cn  rd5 be2"
+      "myle2 rd7 rd6 be3"
+      "rd8 myle3 cn3 rd9";
+
+    grid-gap: 10px;
+    background-color: white;
+    padding: 10px;
+  }
+  p {
+    display: none;
+  }
+  .grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body {
+    background-color: white;
+  }
+
+  .main-navigation {
+    display: none;
+  }
+  .checkbox-container {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .black {
+    grid-area: blk;
+    background-color: black;
+  }
+  .red {
+    grid-area: rd;
+    background-color: red;
+  }
+  .red2 {
+    display: block;
+    grid-area: rd2;
+    background-color: red;
+  }
+  .red3 {
+    grid-area: rd3;
+    background-color: red;
+  }
+  .red4 {
+    grid-area: rd4;
+    background-color: red;
+  }
+  .red5 {
+    grid-area: rd5;
+    background-color: red;
+  }
+  .red6 {
+    grid-area: rd6;
+    background-color: red;
+  }
+
+  .SecRed {
+    grid-area: srd;
+    background-color: red;
+  }
+  .blue {
+    grid-area: be;
+    background-color: blue;
+  }
+  .blue2 {
+    grid-area: be2;
+    background-color: blue;
+  }
+  .blue3 {
+    grid-area: be3;
+    background-color: blue;
+  }
+  .cyan {
+    grid-area: cn;
+    background-color: cyan;
+  }
+  .cyan2 {
+    grid-area: cn2;
+    background-color: cyan;
+  }
+  .cyan3 {
+    grid-area: cn3;
+    background-color: cyan;
+  }
+  .lightblue {
+    grid-area: le;
+    background-color: lightblue;
+  }
+  .lightblue2 {
+    grid-area: le2;
+    background-color: lightblue;
+  }
+  .Mylightblue2 {
+    display: block;
+    grid-area: mylightbe2;
+    background-color: lightblue;
+  }
+  .MyRed {
+    grid-area: myred;
+    background-color: red;
+  }
+  .MyRed2 {
+    grid-area: myred2;
+    background-color: red;
+  }
+  .MyRed3 {
+    display: block;
+    grid-area: myred3;
+    background-color: red;
+  }
+  p {
+    display: none;
+  }
+  .red9 {
+    display: none;
+  }
+  .lightblue3 {
+    display: none;
+  }
+  .SecRed {
+    display: none;
+  }
+  #tablet {
+    display: none;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    height: 100vh;
+    grid-template-areas:
+      "rd rd"
+      "blk blk"
+      "le rd2"
+      "rd3 be2"
+      "rd4 cn"
+      "be3 rd5"
+      "le2 rd6"
+      "myred be"
+      "myred2 mylightbe2"
+      "cn3 myred3";
+    grid-gap: 10px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+}

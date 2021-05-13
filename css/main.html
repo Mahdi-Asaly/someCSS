@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+
+    <span class="checkbox-container">
+      <input class="checkbox-trigger" type="checkbox" />
+      <span class="menu-content">
+        <ul>
+          <li><button>Button</button></li>
+          <li><button>Button</button></li>
+          <li><button>Button</button></li>
+          <li><button>Button</button></li>
+          <li><button>Button</button></li>
+        </ul>
+        <span class="hamburger-menu"></span>
+      </span>
+    </span>
+
+    <nav class="main-navigation">
+      <section>
+        <button>Button</button>
+        <button>Button</button>
+        <button>Button</button>
+        <button>Button</button>
+        <button>Button</button>
+      </section>
+    </nav>
+
+    <nav class="navigation--responsive">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#look-book">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="#blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- responsive nav ends-->
+  </head>
+  <body>
+    <label for="toggle">
+      <i class="fas fa-bars hamburger"></i>
+    </label>
+    <div class="grid-container">
+      <div class="black"></div>
+      <div id ="tablet">Free TExt</div>
+
+      <div class="red"></div>
+      <div class="SecRed"></div>
+      <div class="blue"></div>
+      <div class="lightblue"></div>
+      <div class="cyan"></div>
+      <p>Free TExt</p>
+      <p>Free TExt</p>
+      <p>Free TExt Free</p>
+      <div class="red2"></div>
+      <div class="blue2"></div>
+      <div class="red3"></div>
+      
+      <div class="lightblue3"></div>
+      <div class="red4"></div>
+
+      <div class="lightblue4"></div>
+      <div class="red5"></div>
+      <div class="cyan2"></div>
+      <div class="red6"></div>
+      <div class="blue3"></div>
+
+      <div class="lightblue2"></div>
+      <div class="MyRed"></div>
+      <div class="MyRed2"></div>
+      <div class="Mylightblue2"></div>
+      <div class="cyan3"></div>
+      <div class="MyRed3"></div>
+      <div class="red9"></div>
+    </div>
+  </body>
+</html>
+<script>
+  function gfgMenu() {
+    const GFG = document.querySelector(".links");
+
+    if (GFG.style.display === "none") {
+      GFG.style.display = "block";
+    } else {
+      GFG.style.display = "none";
+    }
+  }
+</script>
